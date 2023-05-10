@@ -15,6 +15,18 @@ Contributors names
 * Aditya Shaw
 * Vaidehi Ramilla
 * Vikrant Kumar
+# Data Structure
+List = {
+id: '',
+Name: “To do”,
+CreatedAt: ‘2PM 02/02/2023’,
+Tasks: [
+	{
+		taskId:'', taskNmae: '', activity: '', description: ''
+}
+]
+}
+
 
 
 
