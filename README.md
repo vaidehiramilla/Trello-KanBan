@@ -6,7 +6,9 @@ This is a simple implementation of a Kanban Board, a tool that helps visualize a
 A Kanban Board is usually made of 3 columns - TODO, InProgress & Done. In each column there are Post-it notes that represents task and their status.
 # Getting Started
 # Dependencies
-* External libraries MUI and react icons
+* Material UI
+* reactjs/toolkit
+* react-redux
 # Installing
 * npm create vite react app 
 # Authors
