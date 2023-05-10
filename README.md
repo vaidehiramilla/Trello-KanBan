@@ -22,7 +22,7 @@ Name: “To do”,
 CreatedAt: ‘2PM 02/02/2023’,
 Tasks: [
 	{
-		taskId:'', taskNmae: '', activity: '', description: ''
+		taskId:'', taskName: '', activity: '', description: ''
 }
 ]
 }
