@@ -18,17 +18,13 @@ Contributors names
 * Vaidehi Ramilla
 * Vikrant Kumar
 # Data Structure
-List = {
-id: '',
-Name: “To do”,
-CreatedAt: ‘new Date()’,
-Tasks: [
-	{
-		taskId:'', taskName: '', activity: '', description: ''
-}
-]
-}
+Todo={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}] },
 
+Doing={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] } ,
+Done={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] },
+Done={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] },
+
+task={ id:Math.random(), date:new Date(), task:"Vuy some vegetable", Username:"sidfspi" history:[{listID:id,dragAndDroptime:"",currentTIme:""},] }
 
 
 
