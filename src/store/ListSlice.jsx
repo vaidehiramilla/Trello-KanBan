@@ -9,7 +9,11 @@ const ListSlice = createSlice({
       addList: (state, action) => {
         state.list.push(action.payload)
         // console.log("action is", action);
+    },
+    addCard: (state, action) => {
+        
     }
+
 }
 
 })

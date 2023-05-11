@@ -9,7 +9,7 @@ export default function AddTask({handleCross,input,handleListInput,handleAddList
         <input value={input} placeholder='Enter list title' onChange={handleListInput}/> <br /> 
         <div className={style.crossbtn}>
         <Button sx={{height:'30px', textTransform: 'capitalize'}} variant="contained" onClick={handleAddList}>Add list</Button>
-        <CloseIcon onClick={handleCross} sx={{fontSize:'30px',color:'black'}}/>
+        <CloseIcon  onClick={handleCross} sx={{fontSize:'30px',color:'black',cursor: 'pointer'}}/>
         </div>
         </div>
     )

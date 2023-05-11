@@ -5,7 +5,7 @@
 .dash_div{
     background-image: url("https://e0.pxfuel.com/wallpapers/356/696/desktop-wallpaper-plain-background-awesome-black-windows-10.jpg");
     /* width: 100vw; */
-    height: 100vh;
+    min-height: 100vh;
     object-fit: contain;
     background-size: cover;
     background-position: center;
@@ -18,7 +18,9 @@
 }
 .dash_containor{
     /* border: 2px red solid; */
-    width: 100%;
+    max-width: 1350px;
+    overflow: hidden;
+    overflow-x: scroll;
     min-height: 500px;
     padding: 2rem 1rem;
     color: whitesmoke;
@@ -27,20 +29,26 @@
 }
 .addbtn{
     /* border: 2px red solid !important; */
-    width: 15vw;
+    min-width: 15vw !important;
+    margin-left: 20px !important;
     height: 8vh;
     color: white !important;
     /* text-transform: lowercase !important; */
-    background-color: rgb(197, 190, 190) !important;
+    background-color: rgba(197, 190, 190, 0.194) !important;
+}
+.addbtn:hover{
+    background-color: rgb(174, 163, 163);
 }
 .addList_div{
     background-color: aliceblue;
-    width: 15vw;
+    min-width: 15vw;
     height: 90px;
     border-radius: 10px;
     padding: 10px 1rem;
     margin-left: 20px;
-    /* border: 2px red solid */
+    /* border: 2px red solid; */
+    /* position: sticky;
+    right: 0; */
 }
 .addList_div input{
     width: 95%;
@@ -70,7 +78,7 @@
     font-size: 25px;
 }
 .listName{
-   
+   /* cursor: pointer; */
     height: 2rem;
     display: flex;
     align-items: center;
