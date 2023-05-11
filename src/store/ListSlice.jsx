@@ -9,9 +9,8 @@ const ListSlice = createSlice({
       addList: (state, action) => {
         state.list.push(action.payload)
         // console.log("action is", action);
-    }
+    },
 }
-
 })
 
 export const {addList} = ListSlice.actions;
