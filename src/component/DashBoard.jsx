@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import AddList from './AddList'
 import { addList } from '../store/ListSlice';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import style from './DashBoard.module.css'
 import Button from '@mui/material/Button';
-import CloseIcon from '@mui/icons-material/Close';
+
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 
@@ -62,21 +63,10 @@ export default function DashBoard() {
         }
       </div>
       {addBtnHide? <Button variant="text" onClick={()=> setAddBtnHide(false)} className={style.addbtn}>+ Add a list</Button> : (
-        <AddTask handleCross={handleCross} input={input} handleListInput={handleListInput} handleAddList={handleAddList}/>
+        <AddList handleCross={handleCross} input={input} handleListInput={handleListInput} handleAddList={handleAddList}/>
       )}
       </div>
     </div>
   )
 }
 
-function AddTask({handleCross,input,handleListInput,handleAddList}){
-    return (
-        <div className={style.addList_div}>
-        <input value={input} placeholder='Enter list title' onChange={handleListInput}/> <br /> 
-        <div className={style.crossbtn}>
-        <Button sx={{height:'30px', textTransform: 'capitalize'}} variant="contained" onClick={handleAddList}>Add list</Button>
-        <CloseIcon onClick={handleCross} sx={{fontSize:'30px',color:'black'}}/>
-        </div>
-        </div>
-    )
-}
