@@ -33,7 +33,7 @@
     margin-left: 20px !important;
     height: 8vh;
     color: white !important;
-    /* text-transform: lowercase !important; */
+    text-transform: initial !important;
     background-color: rgba(197, 190, 190, 0.194) !important;
 }
 .addbtn:hover{

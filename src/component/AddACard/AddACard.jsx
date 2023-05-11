@@ -5,6 +5,7 @@ import style from './AddACard.module.css';
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import { nanoid } from 'nanoid';
+import EditIcon from '@mui/icons-material/Edit';
 
 
 export default function AddACard() {
@@ -12,6 +13,7 @@ export default function AddACard() {
   const [textfield, setTextfield] = useState(false);
   const [closeBtn, setCloseBtn] = useState(true)
   const [cards, setCards] = useState([]);
+  // const [editHidden, setEditHidden] = useState(false)
 
   const handleAddCard = () => {
     // console.log('Adding New Card', cardText);
@@ -41,8 +43,9 @@ export default function AddACard() {
       {/* <h1>Add a card</h1> */}
      <div className={style.cards}>
         {cards.map((card) => (
-          <div key={card.id} className={style.card}>
+          <div key={card.id} className={style.card} >
            <p >  {card.text} </p>
+           <span> <EditIcon sx={{fontSize:'20px'}}/></span>
           </div>
         ))}
       {!textfield ? (

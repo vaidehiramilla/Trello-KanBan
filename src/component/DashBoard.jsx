@@ -11,6 +11,7 @@ import { nanoid } from "nanoid";
 import AddACard from "./AddACard/AddACard";
 import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
+import Navbar from "./header/Navbar";
 
 export default function DashBoard() {
   const list = useSelector((state) => state.ListSlice.list);
@@ -30,7 +31,8 @@ export default function DashBoard() {
       // setList([...list, input])
       dispatch(addList({ id: nanoid(), title: input }));
       setInput("");
-      // setList()
+      // setAddBtnHide(true)
+      window.scrollTo(600, 0);
     }
     // console.log(list);
   }
@@ -55,8 +57,14 @@ export default function DashBoard() {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
+  function handleEditInput(e){
+      // setInput(e.target.innerText)
+     
+  }
+  // console.log(input);
   return (
     <div className={style.dash_div}>
+      <Navbar/>
       <h1>DashBoard</h1>
 
       <div className={style.dash_containor}>
@@ -65,7 +73,7 @@ export default function DashBoard() {
             <div key={index} className={style.cardBox}>
               <div className={style.list_card}>
                 <div className={style.listName}>
-                  {list.title}
+                 <span contentEditable={true} onInput={handleEditInput}> {list.title} </span>
                   {/* <span><MoreHorizIcon onClick={() =>handleListDelete(list)}/></span> */}
 
                   <span>
