@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.dash_div{
+
+.dash_div {
     background-image: url("https://e0.pxfuel.com/wallpapers/356/696/desktop-wallpaper-plain-background-awesome-black-windows-10.jpg");
     /* width: 100vw; */
     height: 100vh;
@@ -11,13 +12,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
-.dash_div h1{
+
+.dash_div h1 {
     color: white;
 }
-.dash_containor{
-    
+
+.dash_containor {
+
     width: 100%;
     /* height: 100%; */
     padding: 2rem 1rem;
@@ -25,7 +27,8 @@
     display: flex;
 
 }
-.addbtn{
+
+.addbtn {
     /* border: 2px red solid !important; */
     width: 15vw;
     height: 8vh;
@@ -33,46 +36,49 @@
     /* text-transform: lowercase !important; */
     background-color: rgb(197, 190, 190) !important;
 }
-.addList_div{
+
+.addList_div {
     background-color: aliceblue;
     width: 15vw;
     min-height: 10vh;
     border-radius: 10px;
     padding: 10px 1rem;
 }
-.addList_div input{
+
+.addList_div input {
     width: 95%;
     height: 30px;
-    padding: 10px 10px ;
+    padding: 10px 10px;
     font-size: large;
     border-radius: 5px;
 }
-.crossbtn{
+
+.crossbtn {
     margin: 10px 0;
     display: flex;
 }
-.list_container{
+
+.list_container {
     display: flex;
-   
     gap: 20px;
 }
-.list_card{
-   width: 18vw;
-   border-radius: 10px;
-   padding: 10px;
-   
+
+.list_card {
+    width: 18vw;
+    border-radius: 10px;
+    padding: 10px;
     background-color: aliceblue;
     color: black;
     font-size: 25px;
 }
-.listName{
-   
+
+.listName {
     height: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.cardBtn{
-  
+
+.cardBtn {
     margin-top: 10px;
 }
