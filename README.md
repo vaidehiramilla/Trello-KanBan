@@ -20,7 +20,7 @@ Contributors names
 # Data Structure
 Todo={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}] },
 
-Doing={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] } ,
+Activity={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] } ,
 Done={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] },
 Done={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] },
 
