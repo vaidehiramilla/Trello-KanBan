@@ -7,6 +7,8 @@ import style from './DashBoard.module.css'
 import Button from '@mui/material/Button';
 
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { nanoid } from 'nanoid';
+import AddACard from './AddACard/AddACard';
 
 
 export default function DashBoard() {
@@ -27,7 +29,7 @@ export default function DashBoard() {
     function handleAddList(){
       if(input){
       // setList([...list, input])
-       dispatch(addList({id: Math.random(), title: input}))
+       dispatch(addList({id: nanoid(), title: input}))
       setInput('')
       // setList()
 
@@ -50,14 +52,18 @@ export default function DashBoard() {
       <div className={style.list_container}>
         {
           list.map((list,index) => (
-            <div key={index} className={style.list_card} >
+            <div key={index} className={style.cardBox}  >
+              <div className={style.list_card}>
+                
+             
               <div className={style.listName}>
               {list.title} <span><MoreHorizIcon onClick={() =>handleListDelete(list)}/></span>
               </div>
               <div className={style.cardBtn}>
-                <Button sx={{width: '10vw', textTransform:'inherit', ":hover":{backgroundColor:'lightgray'}}} variant="text">+ Add a card</Button>
+                {/* <Button sx={{width: '10vw', textTransform:'inherit', ":hover":{backgroundColor:'lightgray'}}} variant="text">+ Add a card</Button> */}
+                <AddACard/>
               </div>
-             
+              </div>
             </div>
           ))
         }
