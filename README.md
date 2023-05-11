@@ -21,7 +21,7 @@ Contributors names
 List = {
 id: '',
 Name: “To do”,
-CreatedAt: ‘2PM 02/02/2023’,
+CreatedAt: ‘new Date()’,
 Tasks: [
 	{
 		taskId:'', taskName: '', activity: '', description: ''
