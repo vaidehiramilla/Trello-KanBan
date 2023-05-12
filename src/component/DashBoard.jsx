@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import AddList from './AddList'
 import { addList } from '../store/ListSlice';
 import { useDispatch } from 'react-redux';
@@ -55,7 +55,7 @@ export default function DashBoard() {
               <div key={index} className={style.list_card} >
               <div >
                 <div className={style.listName}>
-                  {list.title} <span><MoreHorizIcon onClick={() => handleListDelete(list)} /></span>
+                  {list.title} <span><MoreHorizIcon /></span>
                 </div>
                 </div>
                <div className={style.cardBtn}>
