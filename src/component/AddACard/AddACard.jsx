@@ -3,18 +3,17 @@ import { Button, TextField } from "@mui/material";
 import style from './AddACard.module.css';
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
+import { nanoid } from "nanoid";
 
 
 export default function AddACard() {
   const [cardText, setCardText] = useState('');
   const [textfield, setTextfield] = useState(false);
-  const [closeBtn, setCloseBtn] = useState(true)
   const [cards, setCards] = useState([]);
 
   const handleAddCard = () => {
-    // console.log('Adding New Card', cardText);
     const newCard = {
-      id: new Date().getTime(), 
+      id: nanoid(), 
       text: cardText
     };
     setCards(prevCards => [...prevCards, newCard]); 
@@ -30,7 +29,6 @@ export default function AddACard() {
   };
 
   const handlebtn = () => {
-    setCloseBtn(false);
     setTextfield(false);
   };
 
