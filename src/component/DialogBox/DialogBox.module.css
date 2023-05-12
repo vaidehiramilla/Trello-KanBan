@@ -1,0 +1,9 @@
+.mainContainer{
+    border: 2px solid;
+    margin-top: 1rem;
+    width: 70vw;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
