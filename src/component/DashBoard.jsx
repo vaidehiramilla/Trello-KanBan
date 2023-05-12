@@ -65,7 +65,7 @@ export default function DashBoard() {
   return (
     <div className={style.dash_div}>
       <Navbar/>
-      <h1>DashBoard</h1>
+      <h1> New DashBoard</h1>
 
       <div className={style.dash_containor}>
         <div className={style.list_container}>
