@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { MdSubtitles } from 'react-icons/md';
+import style from "./Title.module.css"
 
 const Title = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -17,7 +19,9 @@ const Title = () => {
   };
 
   return (
-    <div>
+    <div className={style.mainContainer}>
+      <div className={style.iconH2}>
+      <div><MdSubtitles className={style.icon}/></div>
       {isEditing ? (
         <input
           type="text"
@@ -27,8 +31,12 @@ const Title = () => {
           autoFocus
         />
       ) : (
-        <h1 onClick={handleHeadingClick}>{headingText}</h1>
+        <h2 onClick={handleHeadingClick}>{headingText}</h2>
       )}
+      </div>
+      <div className={style.p}>
+      <p>In list</p>
+      </div>
     </div>
   );
 };
