@@ -6,16 +6,14 @@ import { useSelector } from 'react-redux';
 import style from './DashBoard.module.css'
 import Button from '@mui/material/Button';
 import Navbar from './header/Navbar';
-
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import AddACard from './AddACard/AddACard';
-import Navbar from './header/Navbar';
+
 
 
 export default function DashBoard() {
   const list = useSelector((state) => state.ListSlice.list)
   const [input, setInput] = useState('')
-  // const [list, setList] = useState(lists)
   const [addBtnHide, setAddBtnHide] = useState(true)
   const dispatch = useDispatch()
 
