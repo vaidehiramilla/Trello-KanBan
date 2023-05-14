@@ -29,3 +29,7 @@
     flex-direction: column;
     gap: 2rem;
 }
+
+.content{
+    margin-left: 2.7rem;
+}

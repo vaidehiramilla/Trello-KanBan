@@ -8,13 +8,25 @@ import { Button } from '@mui/material';
 function Description(){
   const [isEditing, setIsEditing] = useState(false);
   const [content, setContent] = useState('');
+  const [isEditBtnHide, setIsEditBtnHide] = useState(false)
 
-  const handleClick = () => {
+  function handleClick(){
     setIsEditing(true);
   };
 
-  const handleEditorChange = (e) => {
-    setContent(e.target.value);
+  function handleSaveClick(){
+    if(content.length > 0){
+    setIsEditBtnHide(true)
+    }
+    setIsEditing(false)
+  }
+
+  function handleCancleClick(){
+    setIsEditing(false)
+  }
+
+  function removePTag(html){
+    return html.replace(/^<p>/, '').replace(/<\/p>$/, '');
   };
 
   return (
@@ -22,11 +34,16 @@ function Description(){
     <div className={style.logoH1}>
     <div><HiMenuAlt2 className={style.logo}/></div>
     <h2>Description</h2>
+    {isEditBtnHide && <Button sx={{
+    textTransform: "capitalize",
+    backgroundColor: "var(--ds-background-neutral,#091e420a)",
+    color: "black",
+    }} onClick={() => setIsEditing(true)}>Edit</Button>}
     </div>
     <div>
       {isEditing ? 
       <div className={style.textAreaButtons}>
-      <ReactQuill value={content} onChange={handleEditorChange} className={style.reactQuill}/>
+      <ReactQuill value={content} onChange={setContent} className={style.reactQuill}/>
       <div>
       <Button 
       variant="contained" 
@@ -35,7 +52,7 @@ function Description(){
       width: "5rem", 
       textTransform: "capitalize"
       }}
-      onClick={() => setIsEditing(false)}
+      onClick={handleSaveClick}
       >Save</Button>
       <Button 
       sx={{
@@ -43,14 +60,16 @@ function Description(){
       width: "5rem", 
       textTransform: "capitalize"
       }}
-      onClick={() => setIsEditing(false)}
+      onClick={handleCancleClick}
       >Cancel</Button>
       </div>
       </div> 
       :
-     (
-        <div onClick={handleClick} className={style.DescriptionDiv}>Add a more detailed descripition...</div>
-      )}
+      <>
+      {!isEditBtnHide && <div onClick={handleClick} className={style.DescriptionDiv}>Add a more detailed descripition...</div>}
+      {content !== "<p><br></p>" ? <div className={style.content}>{removePTag(content)}</div>:null}
+      </>
+      }
     </div>
     </>
   );
