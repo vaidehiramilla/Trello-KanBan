@@ -2,6 +2,7 @@ import React from 'react'
 import DashBoard from './component/DashBoard'
 import { Provider } from 'react-redux'
 import store from './store'
+import DialogBox from './component/DialogBox/DialogBox'
 
 function App() {
  
@@ -11,7 +12,7 @@ function App() {
     <Provider store={store}>
       <div>
         <DashBoard/>
-        
+       <DialogBox/>
       </div>
       </Provider>
     

@@ -9,8 +9,6 @@ import { Button } from '@mui/material';
 
 export default function Navbar() {
   return (
-  
-
     <div className={style.mainContainer}>
       <div className={style.h2}><h2>Home Task Management</h2></div>
       <div className={style.container}>

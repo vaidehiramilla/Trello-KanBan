@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import style from './DashBoard.module.css'
 import Button from '@mui/material/Button';
+import Navbar from './header/Navbar';
+
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import AddACard from './AddACard/AddACard';
 import Navbar from './header/Navbar';
@@ -45,8 +47,8 @@ export default function DashBoard() {
 
   return (
     <div className={style.dash_div}>
-      <Navbar/>
-      {/* <h1>DashBoard</h1> */}
+        <Navbar/>
+      <h1>DashBoard</h1>
       
       <div className={style.dash_containor}>
         <div className={style.list_container}>
