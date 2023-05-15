@@ -2,7 +2,6 @@ import React from 'react'
 import { useLocation } from 'react-router';
 
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
@@ -18,16 +17,20 @@ const styles = {
   p: 4,
 };
 
-export default function Description(state) {
+export default function Description() {
+
   const [open, setOpen] = React.useState(true);
     const location = useLocation()
-    // console.log(location.state.task);
+    console.log(location.state.task);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
   return (
     <div>
       <h1>description</h1>
-      <h2 onClick={handleOpen}>{location.state.task}</h2>
+      <h2 
+      onClick={handleOpen}
+      >{location.state.task}
+      </h2>
       <Modal
         open={open}
         onClose={handleClose}
