@@ -9,118 +9,59 @@ import AddNew from "./AddNew";
 import Card from "./AddACard/Card";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { DragDropContext, Draggable,Droppable } from "react-beautiful-dnd";
 
 
 export default function DashBoard() {
   const [isHover, setIsHover] = useState(true)
-  const [items , setItems] = useState([])
+  const [items, setItems] = useState([])
   const list = useSelector((state) => state.ListSlice.list);
   const dispatch = useDispatch();
 
   function handleListDelete(item) {
     dispatch(deleteList(item.id));
     toast.success(`List ${item.title} Deleted successfully.`);
-    
+
   }
 
-  function handleDeleteTask(task){
+  function handleDeleteTask(task) {
     const listName = list.filter((item) => item.id === task.listId)
-     dispatch(deleteTask(task))
-     toast.success(`Task ${task.title} from list ${listName[0].title} Deleted successfully.`);
+    dispatch(deleteTask(task))
+    toast.success(`Task ${task.title} from list ${listName[0].title} Deleted successfully.`);
   }
-
-  const onDragEnd = (result) => {
-    if(!result.destination){
-      return;
-    }
-    const reorderedItems = reorder(
-      items,
-      result.source.index,
-      result.destination.index
-    );
-    console.log(reorder)
-  }
-
-
-  function onDragEnd(result) {
-    if (!result.destination) {
-      return;
-    }
-    const newItems = [...list];
-    const [removed] = newItems.splice(result.source.index, 1);
-    newItems.splice(result.destination.index, 0, removed);
-    dispatch(newItems)
-  }
-
-  // const updatedContent = content.map((c, index) => {
-  //   const slide = c
-  //   if (slide.displayPosition === result.destination.index + 1 && index !== result.source.index) {
-  //     slide.displayPosition -= draggedIndexDifference
-  //   }
-  //   return slide
-  // })
-
-  // onDragUpdate = result => {
-  //   if (!result.destination) {
-  //     return
-  //   }
-  //   const { content } = this.state
-  //   const dragged = content[result.source.index]
-  //   const previousDraggedIndex = dragged.displayPosition
-  //   dragged.displayPosition = result.destination.index + 1
-  //   const draggedIndexDifference = dragged.displayPosition - previousDraggedIndex
-  //   const updatedContent = content.map((c, index) => {
-  //     const slide = c
-  //     if (slide.displayPosition === result.destination.index + 1 && index !== result.source.index) {
-  //       slide.displayPosition -= draggedIndexDifference
-  //     }
-  //     return slide
-  //   })
-  //   this.setState({
-  //     content: updatedContent,
-  //   })
-  // }
 
   return (
     <div className={style.dash_div}>
       <Navbar />
-      <ToastContainer position="top-center" autoClose='2000' />
-     <DragDropContext onDragEnd={onDragEnd}>
+      <h1> New DashBoard</h1>
       <div className={style.dash_containor}>
         <div className={style.list_container}>
           {list.map((item) => (
             <div key={item.id} className={style.cardBox}>
               <div className={style.list_card}>
-                <div className={style.listName} 
-                // onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
-                >
-
+                <div className={style.listName}>
                   <span>{item.title}</span>
-                {isHover && <span onClick={() => handleListDelete(item)}>
-                  <DeleteIcon sx={{fontSize:'20px', cursor:'pointer'}} />
-                </span>}
+                  <span onClick={() => handleListDelete(item.id)}>
+                    <DeleteIcon />
+                  </span>
                 </div>
                 <div>
                   {item.task &&
                     item.task.map((task) => (
-                      <div key={task.id} className={style.card} >
+                      <div key={task.id} className={style.card}>
                         <Card cardData={task} />
-                        {/* <span> <EditIcon sx={{fontSize:'15px',cursor:'pointer'}}/></span> */}
-                       <p><DeleteIcon sx={{fontSize:'15px', cursor:'pointer'}} onClick={()=>handleDeleteTask(task)}/></p>
+                        <span> <EditIcon sx={{ fontSize: '20px' }} /></span>
                       </div>
                     ))}
                 </div>
                 <div className={style.cardBtn}>
-                
                   <AddNew type="card" listId={item.id} />
                 </div>
               </div>
             </div>
           ))}
         </div>
+        <AddNew />
       </div>
-      </DragDropContext>
     </div>
   );
 }
