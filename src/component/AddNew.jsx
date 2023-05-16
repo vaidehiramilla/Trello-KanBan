@@ -19,7 +19,7 @@ export default function AddNew({type, listId}) {
 
   function handleAddList(e) {
     e.preventDefault();
-    if(type){
+    if(type && input){
           dispatch(addTask({id: nanoid(7), title: input, listId: listId}))
     }else
     if(input){
@@ -41,7 +41,7 @@ export default function AddNew({type, listId}) {
       ) : (
         <div className={style.addList_div}>
           <form onSubmit={handleAddList}>
-           {type? <TextField  value={input} onChange={handleListInput} placeholder="Add new card..."/> : <input type="text" value={input} onChange={handleListInput} placeholder="Enter list title" />}
+           {type? <TextField  value={input} sx={{backgroundColor:'whitesmoke'}} onChange={handleListInput} placeholder="Add new card..."/> : <input type="text" value={input} onChange={handleListInput} placeholder="Enter list title" />}
             <div className={style.crossbtn}>
               <Button
                 sx={{ height: "30px", textTransform: "capitalize" }}

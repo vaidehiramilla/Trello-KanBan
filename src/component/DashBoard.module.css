@@ -27,6 +27,9 @@
     display: flex;
 
 }
+.dash_containor::-webkit-scrollbar{
+    display: none;
+}
 .addbtn{
     /* border: 2px red solid !important; */
     min-width: 15vw !important;
@@ -81,7 +84,7 @@
     font-size: 25px;
 }
 .listName{
-   /* cursor: pointer; */
+   cursor: pointer;
     height: 2rem;
     display: flex;
     align-items: center;
@@ -106,3 +109,12 @@
     justify-content: space-between;
     margin: 10px 0;
   }
+  /* .card span{
+    margin-left: 50px;
+  } */
+.listName p{
+    color: aliceblue;
+}
+.listName p:hover{
+    color: rgb(157, 16, 16);
+}
