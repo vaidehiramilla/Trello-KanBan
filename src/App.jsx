@@ -1,22 +1,25 @@
 import React from 'react'
 import DashBoard from './component/DashBoard'
-import { Provider } from 'react-redux'
-import store from './store/store'
+
 import { Route, Routes } from 'react-router'
-import Description from './component/description/Description'
+import DialogBox from './component/DialogBox/DialogBox'
+
+
 
 function App() {
  
-
+// const persistor = persistStore(store)
   return (
     <>
-    <Provider store={store}>
+   
+     
       <Routes>
        <Route path='/' element={<DashBoard/>} />
-       <Route path='/task/:id/' element={<Description/>} />
+       <Route path='/task/:id/' element={<DialogBox/>} />
         
       </Routes>
-      </Provider>
+     
+      
     
     </>
   )
