@@ -20,7 +20,7 @@ const styles = {
   width: 700,
   height: 600,
   bgcolor: 'background.paper',
-  border: '2px solid #000',
+//   border: '2px solid #000',
   boxShadow: 24,
   p: 2,
   overflow: 'scroll'
