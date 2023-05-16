@@ -2,10 +2,10 @@
     margin-top: 1rem;
 }
 
-.reactQuill{
+/* .reactQuill{
     width: 50vw;
     height: 10vh;
-}
+} */
 
 .textAreaButton{
     display: flex;
@@ -15,7 +15,7 @@
 }
 
 .activityDiv{
-    width: 50vw;
+    /* width: 50vw; */
     height: 6vh;
     border-radius: .5rem;
     display: flex;
@@ -27,7 +27,7 @@
 }
 
 .iconH2Button{
-    width: 53vw;
+    /* width: 53vw; */
     display: flex;
     align-items: center;
     justify-content: space-between;
