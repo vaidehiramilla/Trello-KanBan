@@ -19,8 +19,8 @@ export default function DashBoard() {
 
   function handleListDelete(item) {
     dispatch(deleteList(item.id));
+    // console.log(item.id)
     toast.success(`List ${item.title} Deleted successfully.`);
-
   }
 
   function handleDeleteTask(task) {
