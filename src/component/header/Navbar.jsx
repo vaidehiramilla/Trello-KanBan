@@ -1,48 +1,9 @@
-// import React from 'react'
-// import style from "./Navbar.module.css"
+import React from 'react'
+import style from "./Navbar.module.css"
 // import FlashOnIcon from '@mui/icons-material/FlashOn';
 // import FilterAltIcon from '@mui/icons-material/FilterAlt';
 // import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 // import { RiUserAddLine } from 'react-icons/ri';
-// import { Button } from '@mui/material';
-// import BackgroundImage from '../BackgroundImage/BackgroundImage';
-// import { useNavigate } from 'react-router-dom';
-
-// // import style from "./Navbar.module.css"
-// // import FlashOnIcon from '@mui/icons-material/FlashOn';
-// // import FilterAltIcon from '@mui/icons-material/FilterAlt';
-// // import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-// // import { RiUserAddLine } from 'react-icons/ri';
-// // import { Button } from '@mui/material';
-
-
-// export default function Navbar() {
-
-//   const navigate = useNavigate()
-  
-//   return (
-//     <div className={style.mainContainer}>
-//       <div className={style.h2}><h2>Home Task Management</h2></div>
-//       <div className={style.container}>
-//       <div className={style.icon}><FlashOnIcon/><span>Automation</span></div>
-//       <div className={style.icon}><FilterAltIcon/><span>Filter</span></div>
-//       <Button  variant="contained" sx={{
-//         textTransform: "capitalize"
-//       }}><RiUserAddLine/>Share</Button>
-//          <Button variant="contained" onClick={() => navigate('/changeImage')}>Change Background</Button>
-//       <MoreHorizIcon/>
-//       </div>
-//     </div>
-//   )
-// }
-
-
-import React from 'react'
-import style from "./Navbar.module.css"
-import FlashOnIcon from '@mui/icons-material/FlashOn';
-import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import { RiUserAddLine } from 'react-icons/ri';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
@@ -57,15 +18,15 @@ export default function Navbar() {
   
   return (
     <div className={style.mainContainer}>
-      <div className={style.h2}><h2>Home Task Management</h2></div>
+      <div className={style.h2}><h2>Kanban Board</h2></div>
       <div className={style.container}>
-      <div className={style.icon}><FlashOnIcon/><span>Automation</span></div>
-      <div className={style.icon}><FilterAltIcon/><span>Filter</span></div>
-      <Button  variant="contained" sx={{
+      {/* <div className={style.icon}><FlashOnIcon/><span>Automation</span></div>
+      <div className={style.icon}><FilterAltIcon/><span>Filter</span></div> */}
+      {/* <Button  variant="contained" sx={{
         textTransform: "capitalize"
-      }}><RiUserAddLine/>Share</Button>
+      }}><RiUserAddLine/>Share</Button> */}
          <Button variant="contained" onClick={handleButtonClick}>Change Background</Button>
-      <MoreHorizIcon/>
+      {/* <MoreHorizIcon/> */}
       </div>
     </div>
   )
