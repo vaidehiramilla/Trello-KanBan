@@ -22,7 +22,7 @@
     overflow: hidden;
     overflow-x: scroll;
     min-height: 500px;
-    padding: 2rem 1rem;
+    /* padding: 2rem 1rem; */
     color: whitesmoke;
     display: flex;
 
@@ -32,19 +32,22 @@
 }
 .addbtn{
     /* border: 2px red solid !important; */
+    border-radius: 10px !important;
     min-width: 15vw !important;
     /* margin: 20px 0 !important; */
     height: 7vh;
-    /* color: white !important; */
+    color: #0b0d12 !important;
     text-transform: initial !important;
     /* background-color: rgba(197, 190, 190, 0.42) !important; */
-    background-color: aliceblue !important;
+    background-color: rgba(243, 243, 243, 0.461) !important;
 }
 .addbtn:hover{
-    background-color: rgb(174, 163, 163);
+    background-color: rgba(174, 163, 163, 0.139) !important;
+    color: white !important;
 }
 .addList_div{
-    background-color: aliceblue;
+    background-color: #ebecf0;
+    
     min-width: 15vw;
     /* width: 20vw; */
     height: 90px;
@@ -79,7 +82,7 @@
    border-radius: 10px;
    padding: 10px;
    /* border: 2px red solid ; */
-    background-color: aliceblue;
+    background-color: #ebecf0;
     color: black;
     font-size: 25px;
 }
@@ -91,15 +94,16 @@
     justify-content: space-between;
 }
 .cardBtn{
-  
-    /* margin-top: 10px; */
-    /* margin-left: -1.5rem; */
-    /* margin: 10px 0; */
-    padding-bottom: 10px;
+    padding-bottom: 10px ;
+}
+.AddNewbtn{
+    /* border: 2px red solid ; */
+    padding: 15px 0;
+    
 }
 
 .card {
-    background-color: #f9f3f3;
+    background-color: #fff;
     border-radius: 6px;
     padding: 10px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -119,13 +123,12 @@
     gap: 10px;
   }
 
-/* .listName:hover {
-    display: inline;
-    border: 2px red solid;
-} */
 
 
-.icon {
-    /* display: none !important; */
-    
+
+.icon:hover {
+    color: red;
+    font-size: 23px;
 }
+
+

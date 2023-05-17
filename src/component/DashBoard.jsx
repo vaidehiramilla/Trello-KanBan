@@ -9,6 +9,7 @@ import AddNew from "./AddNew";
 import Card from "./AddACard/Card";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 
 
@@ -108,7 +109,7 @@ export default function DashBoard() {
                 // onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}
                 >
 
-                 {editingListId === item.id?  (<form >
+                 {editingListId === item.id?  (
                   <input 
                   className={style.editInput}
                   type="text"
@@ -117,7 +118,7 @@ export default function DashBoard() {
                    defaultValue={item.title}
                    onBlur={() =>handleChangeblur(item.id)}
                   />
-                 </form>) : (<span onClick={() => handleToggleEdit(item)} >{item.title}</span>) }
+                 ) : (<span onClick={() => handleToggleEdit(item)} >{item.title}</span>) }
                 <div  className={style.divicon} onClick={() => handleListDelete(item)}>
                   <DeleteIcon className={style.icon} sx={{fontSize:'20px', cursor:'pointer'}} />
                 </div>
@@ -143,7 +144,10 @@ export default function DashBoard() {
             </Draggable>
           ))}
         </div>
+        <div className={style.AddNewbtn}>
         <AddNew />
+        </div>
+        
       </div>
       </div>
         )}

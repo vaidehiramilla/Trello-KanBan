@@ -30,3 +30,8 @@
   height: 30px;
   font-size: large;
 }
+.icon:hover {
+  color: red;
+  font-size: large;
+  
+}
