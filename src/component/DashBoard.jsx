@@ -3,7 +3,6 @@ import { deleteList, deleteTask, reordedList,editList,editTask } from "../store/
 import { useDispatch, useSelector } from "react-redux";
 import style from "./DashBoard.module.css";
 import DeleteIcon from "@mui/icons-material/Delete";
-import style from "./DashBoard.module.css";
 import Navbar from "./header/Navbar";
 import AddNew from "./AddNew";
 import Card from "./AddACard/Card";
