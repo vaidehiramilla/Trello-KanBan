@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { deleteList, deleteTask, reordedList,editList,editTask } from "../store/ListSlice";
 import { useDispatch, useSelector } from "react-redux";
-import style from "./DashBoard.module.css";
+
 import DeleteIcon from "@mui/icons-material/Delete";
 import Navbar from "./header/Navbar";
 import AddNew from "./AddNew";
@@ -15,7 +15,7 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 
 
-export default function DashBoard() {
+export default function DashBoard({ selectedImage }) {
   const [isHover, setIsHover] = useState(true)
   const [editingListId, setEditingListId] = useState(null);
  
@@ -24,6 +24,7 @@ export default function DashBoard() {
   const list = useSelector((state) => state.ListSlice.list);
   // const [list , setList] = useState(lists)
   const dispatch = useDispatch();
+
 
   function handleListDelete(item) {
     dispatch(deleteList(item.id));
@@ -54,7 +55,7 @@ export default function DashBoard() {
   }
 
   const onDragEnd = (result) => {
-    if(!result.destination){
+    if (!result.destination) {
       return;
     }
     function reorder(list, startIndex, endIndex) {
@@ -82,8 +83,12 @@ export default function DashBoard() {
   })
 
   return (
-    <div className={style.dash_div}>
+    
+    <div className={style.dash_div} >
+      <div  className={style.image} style={{ backgroundImage: `url(${selectedImage})` }}>
+      
       <Navbar />
+
       <ToastContainer position="top-center" autoClose='2000' />
      <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId="droppable">
@@ -153,5 +158,7 @@ export default function DashBoard() {
       </Droppable>
       </DragDropContext>
     </div>
+</div>
   );
 }
+
