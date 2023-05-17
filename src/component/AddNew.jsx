@@ -28,6 +28,14 @@ export default function AddNew({ type, listId }) {
     setInput('')
   }
 
+  const btnName =() => {
+    if(type){
+      return '+ Add a card'
+    }else{
+      return '+ Add a list'
+    }
+  }
+
   return (
     <div >
 
@@ -38,7 +46,7 @@ export default function AddNew({ type, listId }) {
           variant="text"
 
         >
-          + Add New
+         {btnName()}
         </Button>
       ) : (
         <div className={style.addList_div}>

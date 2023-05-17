@@ -40,10 +40,39 @@ const ListSlice = createSlice({
 
     },
 
+    reordedList: (state, action) => {
+        state.list = action.payload
+        console.log(action);
+    },
+    editList: (state,action) => {
+        // console.log('action', action);
+        const {itemId, updated} = action.payload
+        const list = state.list.find((item) => item.id === itemId)
+        if (list){
+            list.title =updated
+            
+        }
+        
+    },
+    editTask: (state, action) =>{
+        
+        const {updated,cardData} = action.payload
+        state.list.forEach((item) => {
+            if(item.id === cardData.listId){
+                const taskData = item.task.find((item) => item.id ===cardData.id)
+                if(taskData){
+                    taskData.title=updated
+                    
+                }
+            }
+        })
+           
+    }
+
 
 }
 
 })
 
-export const {addList,deleteList,addTask,deleteTask} = ListSlice.actions;
+export const {addList,deleteList,addTask,deleteTask, reordedList,editList,editTask} = ListSlice.actions;
 export default ListSlice.reducer
