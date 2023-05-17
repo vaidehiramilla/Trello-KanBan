@@ -9,7 +9,8 @@ import AddNew from "./AddNew";
 import Card from "./AddACard/Card";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { DragDropContext, Draggable,Droppable } from "react-beautiful-dnd";
+
+
 
 
 
@@ -26,14 +27,14 @@ export default function DashBoard() {
 
   function handleListDelete(item) {
     dispatch(deleteList(item.id));
+    // console.log(item.id)
     toast.success(`List ${item.title} Deleted successfully.`);
-    
   }
 
-  function handleDeleteTask(task){
+  function handleDeleteTask(task) {
     const listName = list.filter((item) => item.id === task.listId)
-     dispatch(deleteTask(task))
-     toast.success(`Task ${task.title} from list ${listName[0].title} Deleted successfully.`);
+    dispatch(deleteTask(task))
+    toast.success(`Task ${task.title} from list ${listName[0].title} Deleted successfully.`);
   }
 
   function handleToggleEdit(item) {
@@ -134,7 +135,6 @@ export default function DashBoard() {
                     ))}
                 </div>
                 <div className={style.cardBtn}>
-                
                   <AddNew type="card" listId={item.id} />
                 </div>
               </div>
@@ -143,7 +143,6 @@ export default function DashBoard() {
             </Draggable>
           ))}
         </div>
-
         <AddNew />
       </div>
       </div>
