@@ -109,12 +109,23 @@
     justify-content: space-between;
     margin: 10px 0;
   }
-  /* .card span{
-    margin-left: 50px;
-  } */
-.listName p{
-    color: aliceblue;
-}
-.listName p:hover{
-    color: rgb(157, 16, 16);
+  .editInput{
+    width: 100%;
+    height: 30px;
+    font-size: large;
+  }
+  .edIcon{
+    display: flex;
+    gap: 10px;
+  }
+
+/* .listName:hover {
+    display: inline;
+    border: 2px red solid;
+} */
+
+
+.icon {
+    /* display: none !important; */
+    
 }
