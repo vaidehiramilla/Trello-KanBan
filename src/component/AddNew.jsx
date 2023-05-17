@@ -28,6 +28,14 @@ export default function AddNew({type, listId}) {
     setInput('')
   }
 
+  const btnName =() => {
+    if(type){
+      return '+ Add a card'
+    }else{
+      return '+ Add a list'
+    }
+  }
+
   return (
     <div>
       {isFormVisible ? (
@@ -36,12 +44,12 @@ export default function AddNew({type, listId}) {
           className={style.addbtn}
           variant="text"
         >
-          + Add New
+         {btnName()}
         </Button>
       ) : (
         <div className={style.addList_div}>
           <form onSubmit={handleAddList}>
-           {type? <TextField  value={input} sx={{backgroundColor:'whitesmoke'}} onChange={handleListInput} placeholder="Add new card..."/> : <input type="text" value={input} onChange={handleListInput} placeholder="Enter list title" />}
+           {type? <TextField  value={input} sx={{backgroundColor:'#fff'}} onChange={handleListInput} placeholder="Add new card..."/> : <input type="text" value={input} onChange={handleListInput} placeholder="Enter list title" />}
             <div className={style.crossbtn}>
               <Button
                 sx={{ height: "30px", textTransform: "capitalize" }}
