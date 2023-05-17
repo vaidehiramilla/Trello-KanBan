@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { deleteList, deleteTask } from "../store/ListSlice";
 import { useDispatch, useSelector } from "react-redux";
-import EditIcon from '@mui/icons-material/Edit';
 import style from "./DashBoard.module.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Navbar from "./header/Navbar";
