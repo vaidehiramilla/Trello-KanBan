@@ -15,10 +15,11 @@ const ListSlice = createSlice({
       state.list.splice(action.payload, 1);
       // console.log("delete",action.payload);
     },
-    
-    clearAll : (state, action) =>{
-       state.list = []
-    //    state.task = []
+
+    clearAll: (state, action) => {
+      state.list.splice(action.payload, state.list.length);
+      //    state.list = []
+      //    state.task = []
     },
 
     addTask(state, action) {
