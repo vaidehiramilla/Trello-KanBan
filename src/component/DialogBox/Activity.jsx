@@ -77,7 +77,7 @@ export default function Activity() {
 
   return (
     <div className={style.mainContainer}>
-      <ToastContainer position="top-center" autoClose='2000' />
+     
       <div className={style.iconH2Button}>
         <div className={style.iconeH2}>
           <RxActivityLog className={style.logo} />

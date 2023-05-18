@@ -25,6 +25,8 @@ export default function AddNew({ type, listId }) {
     } else
       if (input) {
         dispatch(addList({ id: nanoid(6), title: input }))
+      }else{
+        toast.warning('can not be empty!')
       }
     setInput('')
   }
@@ -39,7 +41,7 @@ export default function AddNew({ type, listId }) {
 
   return (
     <div >
- <ToastContainer position="top-center" autoClose='2000' />
+ 
       {isFormVisible ? (
         <Button
           onClick={() => setIsFormVisible(false)}
