@@ -10,7 +10,6 @@ import Card from "./AddACard/Card";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 
 
