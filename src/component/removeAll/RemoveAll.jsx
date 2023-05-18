@@ -1,13 +1,10 @@
 import React from "react";
 import { clearAll } from "../../store/ListSlice";
 import { useDispatch } from "react-redux";
-
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
+import { DialogTitle } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 
@@ -43,16 +40,24 @@ const RemoveAll = () => {
           onClose={handleClose}
           aria-labelledby="responsive-dialog-title"
         >
-          <DialogContent>
-            <DialogContentText>
-              Do you want to Delete all the list ?
-            </DialogContentText>
-          </DialogContent>
+          <DialogTitle id="responsive-dialog-title">
+            {"Do You want to delete all the list ?"}
+          </DialogTitle>
           <DialogActions>
-            <Button sx={{background:"red"}} variant="contained"  autoFocus onClick={handleClose}>
+            <Button
+              sx={{ background: "red" }}
+              variant="contained"
+              autoFocus
+              onClick={handleClose}
+            >
               N0
             </Button>
-            <Button  sx={{background:"green"}} variant="contained" onClick={deleteAll} autoFocus>
+            <Button
+              sx={{ background: "green" }}
+              variant="contained"
+              onClick={deleteAll}
+              autoFocus
+            >
               Yes
             </Button>
           </DialogActions>
