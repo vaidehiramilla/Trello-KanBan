@@ -11,8 +11,7 @@ const ListSlice = createSlice({
       // console.log("action is", action);
     },
     deleteList: (state, action) => {
-      // state.list = state.list.filter((item) => item.id !== action.payload)
-      state.list.splice(action.payload, 1);
+      state.list = state.list.filter((item) => item.id !== action.payload)
       // console.log("delete",action.payload);
     },
 
