@@ -11,16 +11,10 @@ function App() {
 // const persistor = persistStore(store)
   return (
     <>
-   
-     
       <Routes>
        <Route path='/' element={<DashBoard/>} />
-       <Route path='/task/:id/' element={<DialogBox/>} />
-        
+       <Route path='/task/:id/' element={<DialogBox/>} />    
       </Routes>
-     
-      
-    
     </>
   )
 }
