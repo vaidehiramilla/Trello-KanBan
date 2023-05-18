@@ -8,6 +8,7 @@ import { RxActivityLog } from 'react-icons/rx';
 import DOMPurify from 'dompurify';
 import Avatar from '@mui/material/Avatar';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 export default function Activity() {
@@ -32,7 +33,8 @@ export default function Activity() {
       var dateTime = date + ' ' + time;
       setArr([...arr, { text: text, time: dateTime }])
     } else {
-      return alert("can not be empty")
+      // return alert("can not be empty")
+      toast.warning('can not be empty')
     }
     setText("")
     setIsEditing(false)
@@ -75,6 +77,7 @@ export default function Activity() {
 
   return (
     <div className={style.mainContainer}>
+      <ToastContainer position="top-center" autoClose='2000' />
       <div className={style.iconH2Button}>
         <div className={style.iconeH2}>
           <RxActivityLog className={style.logo} />
