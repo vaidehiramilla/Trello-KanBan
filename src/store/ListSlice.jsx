@@ -35,7 +35,9 @@ const ListSlice = createSlice({
         state.list.forEach((item) => {
             if(item.id === action.payload.listId){
                 // console.log(item)
-               item.task = item.task.filter((task) => task.id !== action.payload.id)
+            //    item.task = item.task.filter((task) => task.id !== action.payload.id)
+               item.task.splice(action.payload,1)
+
             }
         })
 
