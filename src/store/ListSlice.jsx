@@ -17,8 +17,7 @@ const ListSlice = createSlice({
     },
     
     clearAll : (state, action) =>{
-       state.list = []
-    //    state.task = []
+      state.list.splice(action.payload, state.list.length);
     },
 
     addTask(state, action) {
