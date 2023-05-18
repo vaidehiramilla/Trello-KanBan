@@ -6,7 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Navbar from "./header/Navbar";
 import AddNew from "./AddNew";
 import Card from "./AddACard/Card";
-import { toast, ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
