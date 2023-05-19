@@ -29,6 +29,7 @@ const styles = {
 function DialogBox() {
     const [open, setOpen] = React.useState(true);
     const location = useLocation()
+    // console.log(location.state.card.id);
    const navigate = useNavigate()
    const list = useSelector((state) => state.ListSlice.list)
    const listName = list.find((item) => item.id === location.state.card.listId)
@@ -54,7 +55,7 @@ function DialogBox() {
          <Title title ={location.state.card.title} listName={listName.title} cardData = {listName.task[0]}/>
          </div>
      <div className={style.decription}>
-     <Description/>
+     <Description taskId={location.state.card.id}/>
      </div>
      
       <Activity/>

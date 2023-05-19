@@ -7,10 +7,14 @@ import { HiMenuAlt2 } from 'react-icons/hi';
 import { Button } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
 
-function Description() {
-  const contentData = JSON.parse(localStorage.getItem("description")) || ""
+function Description({taskId}) {
+  const contentData = JSON.parse(localStorage.getItem("description")) || ''
+  // const taskContent = contentData.find((data) => data.taskid === taskId)
+  // console.log(taskContent);
   const [isEditing, setIsEditing] = useState(false);
   const [content, setContent] = useState(contentData);
+  // const [desData, setDesContent] = useState();
+
   const [isEditBtnHide, setIsEditBtnHide] = useState(false)
 
   useEffect(() => {
@@ -28,6 +32,9 @@ function Description() {
   function handleSaveClick() {
     if (content) {
       setIsEditBtnHide(true)
+     
+     
+     
     } else {
       toast.warning('can not be empty')
     }
@@ -40,14 +47,11 @@ function Description() {
     setContent("")
   }
 
-  const handleContentChange = (value) => {
-    setContent(value);
+  const handleContentChange = (e) => {
+    setContent(e.target.value);
   };
 
-  const getTextFromHTML = (html) => {
-    const parsedHtml = Parser(html);
-    return parsedHtml;
-  };
+ 
 
   localStorage.setItem('description', JSON.stringify(content));
 
@@ -67,21 +71,22 @@ function Description() {
     <div>
       {isEditing ? 
       <div className={style.textAreaButtons}>
-      <ReactQuill value={content} onChange={handleContentChange} className={style.reactQuill}/>
+      {/* <ReactQuill value={content} onChange={handleContentChange} className={style.reactQuill}/> */}
+      <input type="text" value={content} onChange={handleContentChange} className={style.desText}/>
       <div>
       <Button 
       variant="contained" 
       sx={{
-      marginTop: "2.5rem", 
+       
       width: "5rem", 
       textTransform: "capitalize",
-      marginLeft: "2.7rem"
+      
       }}
       onClick={handleSaveClick}
       >Save</Button>
       <Button 
       sx={{
-      marginTop: "2.5rem", 
+       
       width: "5rem", 
       textTransform: "capitalize"
       }}
@@ -92,7 +97,7 @@ function Description() {
       :
       <>
       {!isEditBtnHide && <div onClick={handleClick} className={style.DescriptionDiv}>Add a more detailed descripition...</div>}
-      <div className={style.content}>{getTextFromHTML(content)}</div>
+      <div className={style.content}>{content}</div>
       </>
       }
     </div>
