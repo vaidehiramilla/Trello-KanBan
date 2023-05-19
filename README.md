@@ -10,6 +10,12 @@ A Kanban Board is usually made of 3 columns - TODO, InProgress & Done. In each c
 * reactjs/toolkit
 * react-redux
 * nanoid
+* react-icons
+* react-quill
+* react-toastify
+* redux-persist
+* react-router-dom
+* react-beautiful-dnd
 # Installing
 * npm create vite react app 
 # Authors
@@ -18,15 +24,50 @@ Contributors names
 * Aditya Shaw
 * Vaidehi Ramilla
 * Vikrant Kumar
-# Data Structure
-Todo={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}] },
+#Data Structure 
+const kanbanBoard = {
+  todo: {
+    id: 1,
+    name: "",
+    tasks: [
+      {
+        taskId: "id",
+        title: "xyz",
+        taskDate: "Date",
+        userId: " ",
+        description: ""
+      }
+    ]
+  },
+  activity: {
+    id: 2,
+    name: "",
+    tasks: [
+      {
+        taskId: "id",
+        title: "xyz",
+        taskDate: "Date",
+        userId: "",
+        description: ""
+      }
+    ]
+  },
+  done: {
+    id: 3,
+    name: "",
+    tasks: [
+      {
+        taskId: "id",
+        title: "xyz",
+        taskDate: "Date",
+        userId: "",
+        description: ""
+      }
+    ]
+  }
+};
 
-Activity={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] } ,
-Done={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] },
-Done={ id:Math.random(), name:"", task:[{taskId:"id",title:"xyz",taskDate:"Date",userId:"",description:""}, ] },
-
-task={ id:Math.random(), date:new Date(), task:"Vuy some vegetable", Username:"sidfspi" history:[{listID:id,dragAndDroptime:"",currentTIme:""},] }
-
-
+#Deployment Link 
+https://kanban-board-y2a1.onrender.com
 
 
