@@ -16,8 +16,7 @@ A Kanban Board is usually made of 3 columns - TODO, InProgress & Done. In each c
 * redux-persist
 * react-router-dom
 * react-beautiful-dnd
-# Installing
-* npm create vite react app 
+ 
 # Authors
 Contributors names
 * Adarsh kushwaha
@@ -41,7 +40,7 @@ const kanbanBoard = {
     ]
   },
   
-  activity: {
+  inProgress: {
     id: 2,
     name: "",
     tasks: [
