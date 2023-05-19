@@ -20,7 +20,7 @@
 }
 .dash_containor{
     /* border: 2px red solid; */
-    max-width: 1350px;
+    max-width: 1650px;
     overflow: hidden;
     overflow-x: scroll;
     min-height: 500px;
