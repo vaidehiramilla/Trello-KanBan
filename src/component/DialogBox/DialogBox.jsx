@@ -7,7 +7,6 @@ import style from "./DialogBox.module.css"
 import { useLocation } from 'react-router';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useSelector } from 'react-redux'
@@ -20,28 +19,26 @@ const styles = {
   width: 800,
   height: 700,
   bgcolor: 'background.paper',
-  // border: '2px solid #000',
   boxShadow: 24,
   p: 2,
   overflow: 'scroll'
 };
 
 function DialogBox() {
-    const [open, setOpen] = React.useState(true);
-    const location = useLocation()
-   const navigate = useNavigate()
-   const list = useSelector((state) => state.ListSlice.list)
-   const listName = list.find((item) => item.id === location.state.card.listId)
-   
-  //  console.log(cardData);
-    const handleClose = () => {
-      setOpen(false)
-      navigate('/')
-    };
-    // console.log(location);
+  const [open, setOpen] = React.useState(true);
+  const location = useLocation()
+  const navigate = useNavigate()
+  const list = useSelector((state) => state.ListSlice.list)
+  const listName = list.find((item) => item.id === location.state.card.listId)
+
+  const handleClose = () => {
+    setOpen(false)
+    navigate('/')
+  };
+
   return (
     <div className={style.mainContainer}>
-     
+
       <Modal
         open={open}
         onClose={handleClose}
@@ -50,14 +47,14 @@ function DialogBox() {
       >
         <Box sx={styles}>
           <Typography id="modal-modal-description" sx={{ mt: 0 }}>
-         <div>
-         <Title title ={location.state.card.title} listName={listName.title} cardData = {listName.task[0]}/>
-         </div>
-     <div className={style.decription}>
-     <Description/>
-     </div>
-     
-      <Activity/>
+            <div>
+              <Title title={location.state.card.title} listName={listName.title} cardData={listName.task[0]} />
+            </div>
+            <div className={style.decription}>
+              <Description />
+            </div>
+
+            <Activity />
           </Typography>
         </Box>
       </Modal>

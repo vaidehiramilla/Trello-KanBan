@@ -12,14 +12,13 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 export default function Activity() {
+
   const updatedCommentData = JSON.parse(localStorage.getItem("commentData")) || []
   const [text, setText] = useState("")
   const [arr, setArr] = useState(updatedCommentData)
   const [isEditing, setIsEditing] = useState(false);
   const [showAndHideDetailes, setshowAndHideDetailes] = useState("Hide detailes")
   const editorRef = useRef(null);
-
-  
 
   function handleClick() {
     setIsEditing(true)
@@ -33,16 +32,11 @@ export default function Activity() {
       var dateTime = date + ' ' + time;
       setArr([...arr, { text: text, time: dateTime }])
     } else {
-      // return alert("can not be empty")
       toast.warning('can not be empty')
     }
     setText("")
     setIsEditing(false)
   }
-
-  // function removePTag(html){
-  //   return html.replace(/^<p>/, '').replace(/<\/p>$/, '');
-  // };
 
   function handleClickDelete(index) {
     let result = arr.filter((ele, i) => i !== index)
@@ -56,12 +50,12 @@ export default function Activity() {
 
   const handleChange = (value) => {
     const sanitizedHTML = DOMPurify.sanitize(value, {
-      ALLOWED_TAGS: [], // Remove all tags except the ones specified
-      KEEP_CONTENT: true, // Keep tag contents
+      ALLOWED_TAGS: [],
+      KEEP_CONTENT: true,
     });
 
     setText(sanitizedHTML);
-    setCursorToEnd(); // Set the cursor position to the end
+    setCursorToEnd();
   };
 
   const setCursorToEnd = () => {
@@ -77,7 +71,7 @@ export default function Activity() {
 
   return (
     <div className={style.mainContainer}>
-     
+
       <div className={style.iconH2Button}>
         <div className={style.iconeH2}>
           <RxActivityLog className={style.logo} />
@@ -90,7 +84,7 @@ export default function Activity() {
               textTransform: "capitalize",
               backgroundColor: "var(--ds-background-neutral,#091e420a)",
               color: "black",
-              
+
             }}>{showAndHideDetailes}</Button>
         </div>
       </div>
@@ -107,25 +101,25 @@ export default function Activity() {
       )
         :
         <div className={style.avatar}>
-        <Avatar src="/broken-image.jpg" />
-        <div onClick={handleClick} className={style.activityDiv}>Write a comment...</div>
+          <Avatar src="/broken-image.jpg" />
+          <div onClick={handleClick} className={style.activityDiv}>Write a comment...</div>
         </div>
       }
       {arr.map((ele, index) => {
         return <div key={index} className={style.commentsEditAndDelete}>
           {showAndHideDetailes === "Hide detailes" ? <>
-          <div className={style.timeAndDelete}>
-          <Avatar src="/broken-image.jpg" />
-          <div className={style.h3}><h3 >Adarsh</h3></div>
-            <div className={style.time}> {ele.time}</div>
-            <div className={style.Delete}>
-              <div onClick={() => handleClickDelete(index)}><DeleteForeverIcon/></div>
+            <div className={style.timeAndDelete}>
+              <Avatar src="/broken-image.jpg" />
+              <div className={style.h3}><h3 >Adarsh</h3></div>
+              <div className={style.time}> {ele.time}</div>
+              <div className={style.Delete}>
+                <div onClick={() => handleClickDelete(index)}><DeleteForeverIcon /></div>
               </div>
             </div>
             <div>
-          <div className={style.comments}>{ele.text}</div>
-          </div>
-            </> : null}
+              <div className={style.comments}>{ele.text}</div>
+            </div>
+          </> : null}
         </div>
       })}
     </div>
