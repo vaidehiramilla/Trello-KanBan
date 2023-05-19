@@ -6,17 +6,17 @@ This is a simple implementation of a Kanban Board, a tool that helps visualize a
 A Kanban Board is usually made of 3 columns - TODO, InProgress & Done. In each column there are Post-it notes that represents task and their status.
 # Getting Started
 # Dependencies
-* Material UI
+* react-router-dom
 * reactjs/toolkit
-* react-redux
-* nanoid
 * react-icons
 * react-quill
 * react-toastify
-* redux-persist
-* react-router-dom
 * react-beautiful-dnd
- 
+* Material UI
+* react-redux
+* redux-persist
+* nanoid
+
 # Authors
 Contributors names
 * Adarsh kushwaha
@@ -25,49 +25,50 @@ Contributors names
 * Vikrant Kumar
 
 # Data Structure 
-const kanbanBoard = {
-  todo: {
-    id: 1,
-    name: "",
-    tasks: [
+{
+  KanBan: {
+    list: [
       {
-        taskId: "id",
-        title: "xyz",
-        taskDate: "Date",
-        userId: " ",
-        description: ""
-      }
-    ]
-  },
-  
-  inProgress: {
-    id: 2,
-    name: "",
-    tasks: [
+        id: 'nanoId',
+        title: 'abc',
+        task: [
+          {
+            id: 'nanoId',
+            title: ' ',
+            listId: ' '
+          },
+          {
+            id: 'nanoId',
+            title: ' ',
+            listId: ' '
+          }
+        ]
+      },
       {
-        taskId: "id",
-        title: "xyz",
-        taskDate: "Date",
-        userId: "",
-        description: ""
-      }
-    ]
-  },
-  
-  done: {
-    id: 3,
-    name: "",
-    tasks: [
+        id: 'nanoId',
+        title: 'xyz',
+        task: [
+          {
+            id: 'nanoId',
+            title: ' ',
+            listId: ' '
+          }
+        ]
+      },
       {
-        taskId: "id",
-        title: "xyz",
-        taskDate: "Date",
-        userId: "",
-        description: ""
+        id: 'nanoId',
+        title: 'pqr',
+        task: [
+          {
+            id: 'nonoId',
+            title: ' ',
+            listId: ' '
+          }
+        ]
       }
     ]
   }
-};
+}
 
 # Deployment Link 
 * https://kanban-board-y2a1.onrender.com
