@@ -40,6 +40,7 @@ const kanbanBoard = {
       }
     ]
   },
+  
   activity: {
     id: 2,
     name: "",
@@ -53,6 +54,7 @@ const kanbanBoard = {
       }
     ]
   },
+  
   done: {
     id: 3,
     name: "",
