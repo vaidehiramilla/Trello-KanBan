@@ -24,45 +24,52 @@ Contributors names
 * Vaidehi Ramilla
 * Vikrant Kumar
 
-# Data Structure 
+
+# Deployment Link 
+* https://kanban-board-y2a1.onrender.com
+
+## Data Structure 
+
+
+```json
 {
-  KanBan: {
-    list: [
+  "KanBan": {
+    "list": [
       {
-        id: 'nanoId',
-        title: 'abc',
-        task: [
+        "id": "nanoId",
+        "title": "abc",
+        "task": [
           {
-            id: 'nanoId',
-            title: ' ',
-            listId: ' '
+            "id": "nanoId",
+            "title": " ",
+            "listId": " "
           },
           {
-            id: 'nanoId',
-            title: ' ',
-            listId: ' '
+            "id": "nanoId",
+            "title": " ",
+            "listId": " "
           }
         ]
       },
       {
-        id: 'nanoId',
-        title: 'xyz',
-        task: [
+        "id": "nanoId",
+        "title": "xyz",
+        "task": [
           {
-            id: 'nanoId',
-            title: ' ',
-            listId: ' '
+            "id": "nanoId",
+            "title": " ",
+            "listId": " "
           }
         ]
       },
       {
-        id: 'nanoId',
-        title: 'pqr',
-        task: [
+        "id": "nanoId",
+        "title": "pqr",
+        "task": [
           {
-            id: 'nonoId',
-            title: ' ',
-            listId: ' '
+            "id": "nonoId",
+            "title": " ",
+            "listId": " "
           }
         ]
       }
@@ -70,7 +77,7 @@ Contributors names
   }
 }
 
-# Deployment Link 
-* https://kanban-board-y2a1.onrender.com
+
+
 
 
