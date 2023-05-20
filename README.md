@@ -8,13 +8,13 @@ A Kanban Board is usually made of 3 columns - TODO, InProgress & Done. In each c
 # Dependencies
 * react-router-dom
 * reactjs/toolkit
+* react-redux
+* redux-persist
 * react-icons
 * react-quill
 * react-toastify
 * react-beautiful-dnd
 * Material UI
-* react-redux
-* redux-persist
 * nanoid
 
 # Authors
