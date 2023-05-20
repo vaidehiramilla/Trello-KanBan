@@ -36,38 +36,38 @@ Contributors names
   "KanBan": {
     "list": [
       {
-        "id": "nanoId",
-        "title": "abc",
+        "id": "nanoId()",
+        "title": "Todo",
         "task": [
           {
-            "id": "nanoId",
+            "id": "nanoId()",
             "title": " ",
             "listId": " "
           },
           {
-            "id": "nanoId",
+            "id": "nanoId()",
             "title": " ",
             "listId": " "
           }
         ]
       },
       {
-        "id": "nanoId",
-        "title": "xyz",
+        "id": "nanoId()",
+        "title": "Doing",
         "task": [
           {
-            "id": "nanoId",
+            "id": "nanoId()",
             "title": " ",
             "listId": " "
           }
         ]
       },
       {
-        "id": "nanoId",
-        "title": "pqr",
+        "id": "nanoId()",
+        "title": "complete",
         "task": [
           {
-            "id": "nonoId",
+            "id": "nonoId()",
             "title": " ",
             "listId": " "
           }
