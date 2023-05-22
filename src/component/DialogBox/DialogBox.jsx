@@ -58,7 +58,7 @@ function DialogBox() {
      <Description cardData={location.state.card}/>
      </div>
      
-      <Activity/>
+      <Activity cardData={location.state.card}/>
           </Typography>
         </Box>
       </Modal>

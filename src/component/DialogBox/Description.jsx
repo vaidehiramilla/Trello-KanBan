@@ -41,7 +41,7 @@ function Description({ cardData }) {
   function handleCancleClick() {
     setIsEditing(false);
     setIsEditBtnHide(false);
-    setContent("");
+    // setContent("");
   }
 
   const handleContentChange = (e) => {
@@ -72,7 +72,7 @@ function Description({ cardData }) {
       <div>
         {isEditing ? (
           <div className={style.textAreaButtons}>
-            {/* <ReactQuill value={content} onChange={handleContentChange} className={style.reactQuill}/> */}
+           
             <input
               type="text"
               value={content}
@@ -108,9 +108,9 @@ function Description({ cardData }) {
                 Add a more detailed descripition...
               </div>
             )}
-            <div className={style.content}>
+           {isEditing? '' : <div className={style.content}>
               {descriptionContent && descriptionContent}
-            </div>
+            </div>}
           </>
         )}
       </div>
