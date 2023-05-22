@@ -38,11 +38,11 @@ function Description({ cardData }) {
     setIsEditing(false);
   }
 
-  function handleCancleClick() {
-    setIsEditing(false);
-    setIsEditBtnHide(false);
-    // setContent("");
-  }
+  // function handleCancleClick() {
+  //   setIsEditing(false);
+  //   setIsEditBtnHide(false);
+  //   // setContent("");
+  // }
 
   const handleContentChange = (e) => {
     setContent(e.target.value);
@@ -90,7 +90,7 @@ function Description({ cardData }) {
               >
                 Save
               </Button>
-              <Button
+              {/* <Button
                 sx={{
                   width: "5rem",
                   textTransform: "capitalize",
@@ -98,7 +98,7 @@ function Description({ cardData }) {
                 onClick={handleCancleClick}
               >
                 Cancel
-              </Button>
+              </Button> */}
             </div>
           </div>
         ) : (
