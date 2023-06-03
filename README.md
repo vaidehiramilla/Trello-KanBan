@@ -7,7 +7,7 @@ A Kanban Board is usually made of 3 columns - But in this Kanban Board user can 
 # Getting Started
 # Dependencies
 * react-router-dom
-* reactjs/toolkit
+* reduxjs toolkit
 * react-redux
 * redux-persist
 * react-icons
