@@ -17,13 +17,6 @@ A Kanban Board is usually made of 3 columns - But in this Kanban Board user can 
 * Material UI
 * nanoid
 
-# Authors
-Contributors names
-* Adarsh kushwaha
-* Aditya Shaw
-* Vaidehi Ramilla
-* Vikrant Kumar
-
 
 # Deployment Link 
 * https://kanban-board-y2a1.onrender.com
